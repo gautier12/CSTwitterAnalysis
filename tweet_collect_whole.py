@@ -10,11 +10,10 @@ def get_candidate_queries(num_candidate, file_path):
     hashtag = file_path + "/hashtag_candidate_" + str(num_candidate) +".txt"
 
     try:
-        print(hashtag)
         hashtag_candidat = open(hashtag,'r')
         liste_hashtags = []
         for t in hashtag_candidat :
-            liste_hashtags.append(t)
+            liste_hashtags+= t.split(' ')
         return liste_hashtags
 
     except IOError:
