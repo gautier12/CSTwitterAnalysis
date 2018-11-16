@@ -26,6 +26,8 @@ def liste_en_texte(l):
        text += ' ' + mot
    return(text)
 
+assert liste_en_texte(['salut','ça','va']) == ' salut ça va'
+
 tweets_studied = texte_tweets()
 
 def extraction_vocabulaire(tweets_under_study) :
@@ -52,5 +54,6 @@ def extraction_vocabulaire(tweets_under_study) :
             lemmatized_words.append(mot)
     return lemmatized_words
 
+assert extraction_vocabulaire(['This sentence is full of vocabulary']) == ['sentence','full','vocabulary'] 
 
 #print(extraction_vocabulaire(tweets_studied))
